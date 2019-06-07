@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1159.0" style="-fx-background-color: #ccffcc;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FramesController.UserDataFrameController">
+   <children>
+      <ImageView fitHeight="171.0" fitWidth="156.0" layoutX="491.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/icons8-male-user-96.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="h1" layoutX="486.0" layoutY="271.0" text="* SET USER NAME">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="h2" layoutX="488.0" layoutY="341.0" text="* SET PASSWORD">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink alignment="CENTER" layoutX="434.0" layoutY="177.0" prefHeight="46.0" prefWidth="271.0" text="Hyperlink">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="h3" layoutX="481.0" layoutY="414.0" text="* SET LANGUAGE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="h4" layoutX="481.0" layoutY="477.0" text="* SET SYSTEM COLOR">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Hyperlink>
+   </children>
+   <effect>
+      <Lighting diffuseConstant="1.27" specularConstant="0.0" specularExponent="16.1" surfaceScale="3.33">
+         <bumpInput>
+            <Shadow height="255.0" radius="127.0" width="255.0" />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>

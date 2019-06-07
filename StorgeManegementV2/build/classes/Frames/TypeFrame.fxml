@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1159.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FramesController.TypeFrameController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="108.0" layoutY="146.0" stroke="#f8bdbd" strokeType="INSIDE" width="944.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutX="108.0" layoutY="197.0" stroke="#f8bdbd" strokeType="INSIDE" width="944.0" />
+      <ToolBar fx:id="main_toolPar" layoutX="361.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="729.0" style="-fx-background-color: #ffffff; -fx-padding: 10;">
+         <items>
+            <JFXButton fx:id="new_btt" onAction="#new_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="new" />
+            <JFXButton fx:id="add_btt" onAction="#add_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="add" />
+            <JFXButton fx:id="edit_btt" onAction="#edit_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="edit" />
+            <JFXButton fx:id="delete_btt" onAction="#delete_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="delete" />
+            <JFXButton fx:id="print_btt" disable="true" onAction="#print_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="print" />
+         </items>
+      </ToolBar>
+      <Label layoutX="968.0" layoutY="205.0" text="العرض" />
+      <TextField fx:id="typeWidth_txt" layoutX="687.0" layoutY="200.0" prefHeight="31.0" prefWidth="204.0" />
+      <Label layoutX="522.0" layoutY="165.0" text="الطول" />
+      <TextField fx:id="typeLength_txt" layoutX="232.0" layoutY="160.0" prefHeight="26.0" prefWidth="212.0" />
+      <Label layoutX="521.0" layoutY="205.0" text="السمك" />
+      <TextField fx:id="typeThick_txt" layoutX="232.0" layoutY="200.0" prefHeight="26.0" prefWidth="212.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutX="108.0" layoutY="115.0" stroke="#f8bdbd" strokeType="INSIDE" width="944.0" />
+      <Label layoutX="933.0" layoutY="125.0" text="رقم الصنف" />
+      <TextField fx:id="typeNmae_txt" layoutX="232.0" layoutY="120.0" prefHeight="26.0" prefWidth="212.0" />
+      <Label layoutX="493.0" layoutY="125.0" prefHeight="21.0" prefWidth="79.0" text="اسم الصنف" />
+      <TextField fx:id="typeNumber_txt" layoutX="687.0" layoutY="120.0" prefHeight="31.0" prefWidth="204.0" />
+      <Label layoutX="945.0" layoutY="166.0" prefHeight="21.0" prefWidth="92.0" text="سعر الشراء" />
+      <TextField fx:id="typePrice_txt" layoutX="687.0" layoutY="161.0" prefHeight="31.0" prefWidth="204.0" />
+      <Separator layoutX="591.0" layoutY="115.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="6.0" style="-fx-background-color: #f8bdbd;" />
+      <JFXTreeTableView fx:id="types_table" layoutX="94.0" layoutY="268.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="374.0" prefWidth="962.0">
+         <columns>
+            <TreeTableColumn fx:id="typeNumber_col" prefWidth="92.79998475313187" text="رقم الصنف" />
+            <TreeTableColumn fx:id="typeName_col" prefWidth="234.0" text="اسم الصنف" />
+            <TreeTableColumn fx:id="typePrice_col" prefWidth="100.0" text="السعر" />
+            <TreeTableColumn fx:id="typeLength_col" prefWidth="194.0" text="الطول " />
+            <TreeTableColumn fx:id="typeWidth_col" prefWidth="164.0" text="العرض" />
+            <TreeTableColumn fx:id="typeThick_col" prefWidth="176.0" text="السمك" />
+         </columns></JFXTreeTableView>
+      <Label layoutX="565.0" layoutY="71.0" style="-fx-background-color: #f8bdbd;" text="الأصناف" />
+      <TextField fx:id="search_txt" alignment="CENTER" layoutX="145.0" layoutY="24.0" prefHeight="33.0" prefWidth="348.0" promptText="بحث..." style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" />
+   </children>
+</AnchorPane>

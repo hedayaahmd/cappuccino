@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FramesController.AccountSearchController">
+   <children>
+      <JFXTreeTableView fx:id="account_table" layoutX="29.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="470.0" prefWidth="459.0">
+         <columns>
+            <TreeTableColumn fx:id="accountNumber_col" prefWidth="157.60003358125687" text="رقم الحساب" />
+            <TreeTableColumn fx:id="accountName_col" prefWidth="300.8000030517578" text="اسم الحساب" />
+         </columns>
+      </JFXTreeTableView>
+      <ToolBar layoutY="505.0" prefHeight="47.0" prefWidth="518.0">
+         <items>
+            <JFXButton fx:id="confirm_btt" onAction="#confirm_btt_clicked" text="sub" />
+            <TextField fx:id="search_txt" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="418.0" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

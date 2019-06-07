@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1159.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FramesController.BuyingBillFrameController">
+   <children>
+      <ToolBar fx:id="main_toolPar" layoutX="499.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="62.0" prefWidth="595.0" style="-fx-background-color: #ffffff; -fx-padding: 10;">
+         <items>
+            <JFXButton fx:id="new_btt" onAction="#new_btt_selected" prefHeight="38.0" prefWidth="52.0" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="new">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="add_btt" onAction="#add_btt_selected" prefHeight="38.0" prefWidth="58.0" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="add">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="edit_btt" onAction="#edit_btt_selected" prefHeight="42.0" prefWidth="50.0" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="edit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="delete_btt" onAction="#delete_btt_selected" prefHeight="38.0" prefWidth="68.0" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="print_btt" onAction="#print_btt_selected" prefHeight="39.0" prefWidth="67.0" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="print">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+         </items>
+      </ToolBar>
+      <HBox layoutX="346.0" layoutY="122.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="55.0" prefWidth="711.0" style="-fx-padding: 12; -fx-spacing: 15;">
+         <children>
+            <Label style="-fx-background-color: #f8bdbd;" text="#رقم الفاتورة" />
+            <TextField fx:id="buyingBillNum_txt" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="51.0" style="-fx-background-color: #f8bdbd;" text="التاريخ" />
+            <DatePicker fx:id="buyingDate_pick" nodeOrientation="LEFT_TO_RIGHT" />
+         </children>
+      </HBox>
+      <ScrollPane fx:id="main_scrollPane" layoutX="71.0" layoutY="318.0" prefHeight="271.0" prefWidth="1017.0">
+         <content>
+            <VBox fx:id="VBoxOfHBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="260.0" prefWidth="1015.0" />
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="994.0" layoutY="211.0" prefHeight="18.0" prefWidth="48.0" style="-fx-background-color: #f8bdbd;" text="البيان" />
+      <Label layoutX="268.0" layoutY="606.0" style="-fx-background-color: #f8bdbd;" text="المجموع" />
+      <TextField fx:id="sumation_txt" alignment="CENTER" layoutX="71.0" layoutY="601.0" />
+      <TextArea fx:id="note_txt" layoutX="524.0" layoutY="201.0" prefHeight="18.0" prefWidth="454.0" />
+      <Label layoutX="629.0" layoutY="76.0" style="-fx-background-color: #f8bdbd;" text="فاتورة مشتريات" />
+      <HBox layoutX="71.0" layoutY="273.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="1017.0" style="-fx-background-color: #f8bdbd; -fx-padding: 12; -fx-spacing: 40;">
+         <children>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="57.0" text="الرقم" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="72.0" text="رقم النوع" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="234.0" text="الإسم" textAlignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="112.0" text="السعر" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="115.0" text="الكمية" />
+            <Label alignment="CENTER" layoutX="376.0" layoutY="10.0" prefHeight="21.0" prefWidth="152.0" text="المجموع" />
+         </children>
+      </HBox>
+      <TextField fx:id="search_txt" layoutX="142.0" layoutY="29.0" prefHeight="33.0" prefWidth="408.0" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" />
+      <JFXButton fx:id="search_btt" layoutX="71.0" layoutY="29.0" onAction="#search_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="بحث" />
+   </children>
+</AnchorPane>

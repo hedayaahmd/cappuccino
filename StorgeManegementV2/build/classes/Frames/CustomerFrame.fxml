@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1159.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FramesController.CustomerFrameController">
+   <children>
+      <TextField fx:id="addresstxt" layoutX="810.0" layoutY="472.0" prefHeight="31.0" prefWidth="229.0" AnchorPane.rightAnchor="120.0" />
+      <ToolBar fx:id="cus_main_toolPar" layoutX="314.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="821.0" style="-fx-background-color: #ffffff;">
+         <items>
+            <JFXButton fx:id="new_btt" onAction="#new_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="new" />
+            <JFXButton fx:id="cus_add_bt" onAction="#cus_add_bt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="add" />
+            <JFXButton fx:id="cus_edit_bt" onAction="#cus_edit_bt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="edit" />
+            <JFXButton fx:id="cus_delete_bt" onAction="#cus_delete_btt_selected" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="delete" />
+            <JFXButton fx:id="print_btt" disable="true" style="-fx-border-color: #f8bdbd; -fx-border-radius: 30;" text="print" />
+         </items>
+      </ToolBar>
+      <TextField fx:id="account_numtxt" alignment="CENTER" layoutX="909.0" layoutY="190.0" prefHeight="31.0" prefWidth="103.0" AnchorPane.rightAnchor="147.0" />
+      <TextField fx:id="idtxt" layoutX="905.0" layoutY="318.0" prefHeight="26.0" prefWidth="120.0" AnchorPane.rightAnchor="134.0" />
+      <TextField fx:id="nametxt" alignment="CENTER" layoutX="771.0" layoutY="253.0" prefHeight="31.0" prefWidth="244.0" AnchorPane.rightAnchor="144.0" />
+      <TextField fx:id="phonetxt" layoutX="870.0" layoutY="401.0" prefHeight="31.0" prefWidth="162.0" AnchorPane.rightAnchor="127.0" />
+      <Label layoutX="1070.0" layoutY="258.0" style="-fx-background-color: #f8bdbd;" text="الاسم" AnchorPane.rightAnchor="55.0" />
+      <Label layoutX="1073.0" layoutY="409.0" style="-fx-background-color: #f8bdbd;" text="الهاتف" AnchorPane.rightAnchor="45.0" />
+      <Label layoutX="1058.0" layoutY="193.0" style="-fx-background-color: #f8bdbd;" text="# الرقم" AnchorPane.rightAnchor="57.0" />
+      <Label layoutX="1082.0" layoutY="479.0" style="-fx-background-color: #f8bdbd;" text="العنوان" AnchorPane.rightAnchor="33.0" />
+      <Label layoutX="1057.0" layoutY="325.0" style="-fx-background-color: #f8bdbd;" text="رقم الهويه" AnchorPane.rightAnchor="39.0" />
+      <JFXTreeTableView fx:id="Cus_Table" layoutX="14.0" layoutY="66.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="579.0" prefWidth="669.0">
+         <columns>
+            <TreeTableColumn fx:id="account_num_col" prefWidth="50.0" text="رقم" />
+            <TreeTableColumn fx:id="name_col" prefWidth="136.0" text="الاسم" />
+            <TreeTableColumn fx:id="phone_col" prefWidth="131.0" text="الهاتف" />
+            <TreeTableColumn fx:id="address_col" prefWidth="130.0" text="العنوان" />
+            <TreeTableColumn fx:id="id_col" prefWidth="127.0" text="رقم الهوية" />
+            <TreeTableColumn fx:id="registry_Date_col" prefWidth="94.0" text="تاريخ التسجيل" />
+         </columns>
+      </JFXTreeTableView>
+      <ToolBar layoutX="14.0" layoutY="30.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="475.0">
+         <items>
+            <TextField fx:id="searchtxt" alignment="CENTER" prefHeight="26.0" prefWidth="274.0" promptText="بحث" style="-fx-border-color: #f8bdbd;" />
+         </items>
+      </ToolBar>
+      <Separator layoutX="703.0" layoutY="74.0" orientation="VERTICAL" prefHeight="601.0" prefWidth="6.0" style="-fx-background-color: #f8bdbd;" />
+      <Label layoutX="879.0" layoutY="124.0" style="-fx-background-color: #f8bdbd;" text="حسابات الزبائن" />
+   </children>
+</AnchorPane>

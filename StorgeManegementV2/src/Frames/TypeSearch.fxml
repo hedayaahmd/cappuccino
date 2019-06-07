@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FramesController.TypeSearchController">
+   <children>
+      <ToolBar prefHeight="47.0" prefWidth="537.0">
+         <items>
+            <JFXButton fx:id="confirm_btt" onAction="#confirm_btt_clicked" text="submit" />
+            <TextField fx:id="search_txt" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="418.0" />
+         </items>
+      </ToolBar>
+      <JFXTreeTableView fx:id="types_table" layoutX="24.0" layoutY="65.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="370.0" prefWidth="713.0">
+         <columns>
+            <TreeTableColumn fx:id="typeNumber_col" prefWidth="92.79998475313187" text="رقم الصنف" />
+            <TreeTableColumn fx:id="typeName_col" prefWidth="167.19995880126953" text="اسم الصنف" />
+            <TreeTableColumn fx:id="typePrice_col" prefWidth="121.5999755859375" text="السعر" />
+            <TreeTableColumn fx:id="typeLength_col" prefWidth="111.99996948242188" text="الطول " />
+            <TreeTableColumn fx:id="typeWidth_col" prefWidth="102.39996337890625" text="العرض" />
+            <TreeTableColumn fx:id="typeThick_col" prefWidth="117.60009765625" text="السمك" />
+         </columns>
+      </JFXTreeTableView>
+   </children>
+</AnchorPane>
